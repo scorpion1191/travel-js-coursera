@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation Website</title>
+    <style>
+        body, html {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Set body and html to 100% height */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background to header for better readability */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent black background to navigation for better readability */
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover for better interactivity */
+        }
+        .search-bar {
+            margin-right: 20px;
+            align-self: center;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .search-bar input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .page-section {
+            height: 100vh; /* Set each section to 100% viewport height */
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .recommendations {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .recommendations h3 {
+            margin-top: 0;
+        }
+        .recommendations ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .recommendations li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Travel Recommendation Website</h1>
+</header>
+
+<nav>
+    <div class="search-bar">
+        <form action="#" method="GET">
+            <input type="text" name="search" placeholder="Search...">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+</nav>
+
+<section id="home" class="page-section" style="background-color: #333;">
+    <div class="container">
+        <div>
+            <h2>Welcome to Our Travel Recommendation Website!</h2>
+            <p>
+                Discover amazing destinations, plan unforgettable trips, and make lifelong memories with our travel recommendation website. 
+                Whether you're seeking adventure in the mountains, relaxation on the beach, or immersion in vibrant cultures, we've got you covered.
+                Explore our curated list of destinations, read insightful travel guides, and connect with fellow travelers to enhance your journey.
+            </p>
+        </div>
+        <div class="recommendations">
+            <h3>Featured Destinations</h3>
+            <ul>
+                <li>Destination 1</li>
+                <li>Destination 2</li>
+                <li>Destination 3</li>
+                <li>Destination 4</li>
+                <li>Destination 5</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="page-section" style="background-color: #555;">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>
+            TravelX is a leading platform for travel recommendations, offering personalized suggestions, expert advice, and community insights to help travelers discover their next adventure. 
+            Our mission is to inspire and empower people to explore the world by providing them with the tools and resources they need to plan unforgettable journeys.
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="page-section" style="background-color: #777;">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Smooth scroll to section on click of navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute('href'));
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
